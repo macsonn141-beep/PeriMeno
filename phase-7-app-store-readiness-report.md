@@ -25,10 +25,10 @@
 ## B. What is still missing
 
 - Real Apple Developer Team is not configured: `DEVELOPMENT_TEAM` is empty.
-- Public privacy policy URL is still a placeholder.
-- Public support URL is still a placeholder.
-- Public marketing URL is still a placeholder.
-- Support email is still `support@example.com`.
+- Public privacy policy URL now points to the repository privacy policy.
+- Public support URL now points to the repository.
+- Public marketing URL now points to the repository.
+- A monitored support email is still recommended before release.
 - App Store Connect app record is not represented in the repo.
 - Production in-app purchase products must be created and approved in App Store Connect.
 - Final screenshots have not been captured.
@@ -44,7 +44,7 @@
 
 ## C. What can block App Review
 
-- Placeholder URLs or support contact details.
+- Missing owned production URLs or monitored support contact details.
 - Missing or incorrect App Privacy nutrition labels in App Store Connect.
 - Health-related wording that implies diagnosis, treatment, prevention, or medical advice.
 - In-app purchases not configured in App Store Connect or not restorable in sandbox.

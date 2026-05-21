@@ -18,7 +18,7 @@ The app can generate reports for your personal review and for discussion with yo
 
 Your choices
 - You can delete entries inside the app via history management features.
-- If you have questions or need support, contact us at [SUPPORT_EMAIL_PLACEHOLDER_REPLACE_BEFORE_RELEASE].
+- If you have questions or need support, visit https://github.com/macsonn141-beep/PeriMeno.
 
 Disclaimer
 PeriMeno is intended for personal tracking and supporting discussions with clinicians. It does not provide medical diagnosis, treatment, or replace professional medical care.
