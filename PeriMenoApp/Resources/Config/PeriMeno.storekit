@@ -1,0 +1,77 @@
+{
+  "products" : [
+    {
+      "displayPrice" : "29.99",
+      "familyShareable" : false,
+      "internalID" : "LIFETIME01",
+      "localizations" : [
+        {
+          "description" : "Lifetime access to PeriMeno premium tools for local testing.",
+          "displayName" : "PeriMeno Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.perimeno.lifetime",
+      "referenceName" : "PeriMeno Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "PERIMENO_PREMIUM",
+      "localizations" : [
+      ],
+      "name" : "PeriMeno Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "MONTHLY01",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Monthly access to premium PeriMeno reports, insights, and tracking tools for local testing.",
+              "displayName" : "PeriMeno Premium Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.perimeno.premium.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "PeriMeno Premium Monthly",
+          "subscriptionGroupID" : "PERIMENO_PREMIUM",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+          ],
+          "displayPrice" : "39.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "YEARLY01",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Yearly access to premium PeriMeno reports, insights, and tracking tools for local testing.",
+              "displayName" : "PeriMeno Premium Yearly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.perimeno.premium.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "PeriMeno Premium Yearly",
+          "subscriptionGroupID" : "PERIMENO_PREMIUM",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 0
+  }
+}

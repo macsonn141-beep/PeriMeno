@@ -1,0 +1,1536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B000000000000000000000D1 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000015 /* AppRouter.swift */; };
+		B000000000000000000000D2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000016 /* AppState.swift */; };
+		B000000000000000000000D3 /* PeriMenoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000017 /* PeriMenoApp.swift */; };
+		B000000000000000000000D4 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000018 /* RootTabView.swift */; };
+		B000000000000000000000D5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000001B /* AppConstants.swift */; };
+		B000000000000000000000D6 /* PremiumProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000001C /* PremiumProducts.swift */; };
+		B000000000000000000000D7 /* SymptomCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000001D /* SymptomCatalog.swift */; };
+		B000000000000000000000D8 /* TriggerCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000001E /* TriggerCatalog.swift */; };
+		B000000000000000000000D9 /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000020 /* Color+Theme.swift */; };
+		B000000000000000000000DA /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000021 /* Date+Formatting.swift */; };
+		B000000000000000000000DB /* View+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000022 /* View+Helpers.swift */; };
+		B000000000000000000000DC /* AppointmentPrep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000024 /* AppointmentPrep.swift */; };
+		B000000000000000000000DD /* CustomSymptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000025 /* CustomSymptom.swift */; };
+		B000000000000000000000DE /* CycleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000026 /* CycleLog.swift */; };
+		B000000000000000000000DF /* DailyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000027 /* DailyEntry.swift */; };
+		B000000000000000000000E0 /* InsightSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000028 /* InsightSnapshot.swift */; };
+		B000000000000000000000E1 /* MedicationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000029 /* MedicationEvent.swift */; };
+		B000000000000000000000E2 /* MedicationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000002A /* MedicationProfile.swift */; };
+		B000000000000000000000E3 /* SymptomLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000002B /* SymptomLog.swift */; };
+		B000000000000000000000E4 /* TriggerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000002C /* TriggerLog.swift */; };
+		B000000000000000000000E5 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000002D /* UserProfile.swift */; };
+		B000000000000000000000E6 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000002F /* Haptics.swift */; };
+		B000000000000000000000E7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000030 /* Logger.swift */; };
+		B000000000000000000000E8 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000031 /* Validators.swift */; };
+		B000000000000000000000E9 /* AppointmentQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000035 /* AppointmentQuestion.swift */; };
+		B000000000000000000000EA /* AppointmentBuilderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000037 /* AppointmentBuilderViewModel.swift */; };
+		B000000000000000000000EB /* AppointmentBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000039 /* AppointmentBuilderView.swift */; };
+		B000000000000000000000EC /* BrainFogChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000003C /* BrainFogChoice.swift */; };
+		B000000000000000000000ED /* BrainFogModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000003E /* BrainFogModeViewModel.swift */; };
+		B000000000000000000000EE /* BrainFogModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000040 /* BrainFogModeView.swift */; };
+		B000000000000000000000EF /* CycleDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000043 /* CycleDraft.swift */; };
+		B000000000000000000000F0 /* CycleLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000045 /* CycleLogViewModel.swift */; };
+		B000000000000000000000F1 /* CycleLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000047 /* CycleLogView.swift */; };
+		B000000000000000000000F2 /* HomeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000004A /* HomeAction.swift */; };
+		B000000000000000000000F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000004C /* HomeViewModel.swift */; };
+		B000000000000000000000F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000004E /* HomeView.swift */; };
+		B000000000000000000000F5 /* InsightCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000051 /* InsightCardModel.swift */; };
+		B000000000000000000000F6 /* InsightsOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000053 /* InsightsOverviewViewModel.swift */; };
+		B000000000000000000000F7 /* CorrelationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000055 /* CorrelationDetailView.swift */; };
+		B000000000000000000000F8 /* InsightsOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000056 /* InsightsOverviewView.swift */; };
+		B000000000000000000000F9 /* TrendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000057 /* TrendDetailView.swift */; };
+		B000000000000000000000FA /* LogDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000005A /* LogDraft.swift */; };
+		B000000000000000000000FB /* LogEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000005C /* LogEntryViewModel.swift */; };
+		B000000000000000000000FC /* LogEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000005E /* LogEntryView.swift */; };
+		B000000000000000000000FD /* MedicationDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000061 /* MedicationDraft.swift */; };
+		B000000000000000000000FE /* MedicationLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000063 /* MedicationLogViewModel.swift */; };
+		B000000000000000000000FF /* MedicationLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000065 /* MedicationLogView.swift */; };
+		B00000000000000000000100 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000068 /* OnboardingPage.swift */; };
+		B00000000000000000000101 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000006A /* OnboardingViewModel.swift */; };
+		B00000000000000000000102 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000006C /* OnboardingView.swift */; };
+		B00000000000000000000103 /* PaywallPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000006F /* PaywallPlan.swift */; };
+		B00000000000000000000104 /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000071 /* PaywallViewModel.swift */; };
+		B00000000000000000000105 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000073 /* PaywallView.swift */; };
+		B00000000000000000000106 /* ReportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000076 /* ReportOption.swift */; };
+		B00000000000000000000107 /* ReportsExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000078 /* ReportsExportViewModel.swift */; };
+		B00000000000000000000108 /* ReportsExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000007A /* ReportsExportView.swift */; };
+		B00000000000000000000109 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000007D /* SettingsRow.swift */; };
+		B0000000000000000000010A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000007F /* SettingsViewModel.swift */; };
+		B0000000000000000000010B /* HealthAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000081 /* HealthAccessView.swift */; };
+		B0000000000000000000010C /* PrivacySecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000082 /* PrivacySecurityView.swift */; };
+		B0000000000000000000010D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000083 /* SettingsView.swift */; };
+		B0000000000000000000010E /* SymptomCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000086 /* SymptomCategory.swift */; };
+		B0000000000000000000010F /* SymptomsPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000088 /* SymptomsPickerViewModel.swift */; };
+		B00000000000000000000110 /* SymptomsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000008A /* SymptomsPickerView.swift */; };
+		B00000000000000000000111 /* AppConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000008D /* AppConfiguration.plist */; };
+		B0000000000000000000012F /* PeriMeno.storekit in Resources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000D1 /* PeriMeno.storekit */; };
+		B00000000000000000000112 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000008F /* Localizable.xcstrings */; };
+		B00000000000000000000113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000091 /* Preview Assets.xcassets */; };
+		B00000000000000000000114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000092 /* Assets.xcassets */; };
+		B00000000000000000000115 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000095 /* HealthKitManager.swift */; };
+		B00000000000000000000116 /* HealthPermissionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000096 /* HealthPermissionState.swift */; };
+		B00000000000000000000117 /* CorrelationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000098 /* CorrelationEngine.swift */; };
+		B00000000000000000000118 /* InsightEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000099 /* InsightEngine.swift */; };
+		B00000000000000000000119 /* StageHintEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000009A /* StageHintEngine.swift */; };
+		B0000000000000000000011A /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000009C /* LocalizationManager.swift */; };
+		B0000000000000000000011B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000009E /* PersistenceController.swift */; };
+		B0000000000000000000011C /* PreviewDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0000000000000000000009F /* PreviewDataFactory.swift */; };
+		B0000000000000000000011D /* PremiumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000A1 /* PremiumManager.swift */; };
+		B0000000000000000000011E /* PurchaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000A2 /* PurchaseState.swift */; };
+		B0000000000000000000011F /* PDFReportBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000A4 /* PDFReportBuilder.swift */; };
+		B00000000000000000000120 /* ReportTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000A5 /* ReportTemplates.swift */; };
+		B00000000000000000000121 /* BiometricLockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000A7 /* BiometricLockManager.swift */; };
+		B00000000000000000000122 /* PMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000AA /* PMButton.swift */; };
+		B00000000000000000000123 /* PMCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000AB /* PMCard.swift */; };
+		B00000000000000000000124 /* PMEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000AC /* PMEmptyStateView.swift */; };
+		B00000000000000000000125 /* PMPremiumBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000AD /* PMPremiumBadge.swift */; };
+		B00000000000000000000126 /* PMSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000AE /* PMSectionHeader.swift */; };
+		B00000000000000000000127 /* PMStatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000AF /* PMStatCard.swift */; };
+		B00000000000000000000128 /* PMSymptomChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000B0 /* PMSymptomChip.swift */; };
+		B00000000000000000000129 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000B2 /* SampleData.swift */; };
+		B0000000000000000000012A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000B4 /* Theme.swift */; };
+		B0000000000000000000012B /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000B5 /* ThemeColors.swift */; };
+		B0000000000000000000012C /* ThemeSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000B6 /* ThemeSpacing.swift */; };
+		B0000000000000000000012D /* ThemeTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000B7 /* ThemeTypography.swift */; };
+		B0000000000000000000012E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000BB /* PrivacyInfo.xcprivacy */; };
+		T10000000000000000000001 /* PremiumProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000BE /* PremiumProductsTests.swift */; };
+		T10000000000000000000002 /* CorrelationEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000C1 /* CorrelationEngineTests.swift */; };
+		T10000000000000000000003 /* InsightEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000C2 /* InsightEngineTests.swift */; };
+		T10000000000000000000004 /* SampleDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000C4 /* SampleDataTests.swift */; };
+		T10000000000000000000005 /* InsightsSmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000C7 /* InsightsSmokeUITests.swift */; };
+		T10000000000000000000006 /* LoggingSmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000C9 /* LoggingSmokeUITests.swift */; };
+		T10000000000000000000007 /* OnboardingSmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000CB /* OnboardingSmokeUITests.swift */; };
+		T10000000000000000000008 /* PremiumSmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000000000000000000000CD /* PremiumSmokeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		T10000000000000000000020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000000000000000000002 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000001;
+			remoteInfo = PeriMeno;
+		};
+		T10000000000000000000021 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000000000000000000002 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000001;
+			remoteInfo = PeriMeno;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F00000000000000000000001 /* PeriMeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeriMeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00000000000000000000002 /* PeriMenoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeriMenoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00000000000000000000003 /* PeriMenoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeriMenoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E00000000000000000000003 /* AccessibilityChecklist.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "AccessibilityChecklist.md"; sourceTree = "<group>"; };
+		E00000000000000000000004 /* DesignTokens.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "DesignTokens.md"; sourceTree = "<group>"; };
+		E00000000000000000000005 /* UXWriting.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "UXWriting.md"; sourceTree = "<group>"; };
+		E00000000000000000000007 /* Architecture.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Architecture.md"; sourceTree = "<group>"; };
+		E00000000000000000000008 /* DataModel.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "DataModel.md"; sourceTree = "<group>"; };
+		E00000000000000000000009 /* HealthKitPlan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "HealthKitPlan.md"; sourceTree = "<group>"; };
+		E0000000000000000000000A /* ReportingPlan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ReportingPlan.md"; sourceTree = "<group>"; };
+		E0000000000000000000000B /* StoreKitPlan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "StoreKitPlan.md"; sourceTree = "<group>"; };
+		E0000000000000000000000D /* FeatureScope.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "FeatureScope.md"; sourceTree = "<group>"; };
+		E0000000000000000000000E /* LocalizationPlan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "LocalizationPlan.md"; sourceTree = "<group>"; };
+		E0000000000000000000000F /* ProductVision.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "ProductVision.md"; sourceTree = "<group>"; };
+		E00000000000000000000011 /* LaunchChecklist.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "LaunchChecklist.md"; sourceTree = "<group>"; };
+		E00000000000000000000012 /* MVPTestChecklist.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MVPTestChecklist.md"; sourceTree = "<group>"; };
+		E00000000000000000000015 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter.swift"; sourceTree = "<group>"; };
+		E00000000000000000000016 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState.swift"; sourceTree = "<group>"; };
+		E00000000000000000000017 /* PeriMenoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeriMenoApp.swift"; sourceTree = "<group>"; };
+		E00000000000000000000018 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootTabView.swift"; sourceTree = "<group>"; };
+		E0000000000000000000001B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConstants.swift"; sourceTree = "<group>"; };
+		E0000000000000000000001C /* PremiumProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PremiumProducts.swift"; sourceTree = "<group>"; };
+		E0000000000000000000001D /* SymptomCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SymptomCatalog.swift"; sourceTree = "<group>"; };
+		E0000000000000000000001E /* TriggerCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TriggerCatalog.swift"; sourceTree = "<group>"; };
+		E00000000000000000000020 /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		E00000000000000000000021 /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
+		E00000000000000000000022 /* View+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Helpers.swift"; sourceTree = "<group>"; };
+		E00000000000000000000024 /* AppointmentPrep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentPrep.swift"; sourceTree = "<group>"; };
+		E00000000000000000000025 /* CustomSymptom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSymptom.swift"; sourceTree = "<group>"; };
+		E00000000000000000000026 /* CycleLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleLog.swift"; sourceTree = "<group>"; };
+		E00000000000000000000027 /* DailyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyEntry.swift"; sourceTree = "<group>"; };
+		E00000000000000000000028 /* InsightSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightSnapshot.swift"; sourceTree = "<group>"; };
+		E00000000000000000000029 /* MedicationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicationEvent.swift"; sourceTree = "<group>"; };
+		E0000000000000000000002A /* MedicationProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicationProfile.swift"; sourceTree = "<group>"; };
+		E0000000000000000000002B /* SymptomLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SymptomLog.swift"; sourceTree = "<group>"; };
+		E0000000000000000000002C /* TriggerLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TriggerLog.swift"; sourceTree = "<group>"; };
+		E0000000000000000000002D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile.swift"; sourceTree = "<group>"; };
+		E0000000000000000000002F /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Haptics.swift"; sourceTree = "<group>"; };
+		E00000000000000000000030 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger.swift"; sourceTree = "<group>"; };
+		E00000000000000000000031 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validators.swift"; sourceTree = "<group>"; };
+		E00000000000000000000035 /* AppointmentQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentQuestion.swift"; sourceTree = "<group>"; };
+		E00000000000000000000037 /* AppointmentBuilderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentBuilderViewModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000039 /* AppointmentBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentBuilderView.swift"; sourceTree = "<group>"; };
+		E0000000000000000000003C /* BrainFogChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrainFogChoice.swift"; sourceTree = "<group>"; };
+		E0000000000000000000003E /* BrainFogModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrainFogModeViewModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000040 /* BrainFogModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrainFogModeView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000043 /* CycleDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleDraft.swift"; sourceTree = "<group>"; };
+		E00000000000000000000045 /* CycleLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleLogViewModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000047 /* CycleLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleLogView.swift"; sourceTree = "<group>"; };
+		E0000000000000000000004A /* HomeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeAction.swift"; sourceTree = "<group>"; };
+		E0000000000000000000004C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel.swift"; sourceTree = "<group>"; };
+		E0000000000000000000004E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000051 /* InsightCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightCardModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000053 /* InsightsOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightsOverviewViewModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000055 /* CorrelationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CorrelationDetailView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000056 /* InsightsOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightsOverviewView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000057 /* TrendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendDetailView.swift"; sourceTree = "<group>"; };
+		E0000000000000000000005A /* LogDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogDraft.swift"; sourceTree = "<group>"; };
+		E0000000000000000000005C /* LogEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogEntryViewModel.swift"; sourceTree = "<group>"; };
+		E0000000000000000000005E /* LogEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogEntryView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000061 /* MedicationDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicationDraft.swift"; sourceTree = "<group>"; };
+		E00000000000000000000063 /* MedicationLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicationLogViewModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000065 /* MedicationLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicationLogView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000068 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingPage.swift"; sourceTree = "<group>"; };
+		E0000000000000000000006A /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingViewModel.swift"; sourceTree = "<group>"; };
+		E0000000000000000000006C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView.swift"; sourceTree = "<group>"; };
+		E0000000000000000000006F /* PaywallPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallPlan.swift"; sourceTree = "<group>"; };
+		E00000000000000000000071 /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallViewModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000073 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000076 /* ReportOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportOption.swift"; sourceTree = "<group>"; };
+		E00000000000000000000078 /* ReportsExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportsExportViewModel.swift"; sourceTree = "<group>"; };
+		E0000000000000000000007A /* ReportsExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportsExportView.swift"; sourceTree = "<group>"; };
+		E0000000000000000000007D /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsRow.swift"; sourceTree = "<group>"; };
+		E0000000000000000000007F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewModel.swift"; sourceTree = "<group>"; };
+		E00000000000000000000081 /* HealthAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthAccessView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000082 /* PrivacySecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrivacySecurityView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000083 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView.swift"; sourceTree = "<group>"; };
+		E00000000000000000000086 /* SymptomCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SymptomCategory.swift"; sourceTree = "<group>"; };
+		E00000000000000000000088 /* SymptomsPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SymptomsPickerViewModel.swift"; sourceTree = "<group>"; };
+		E0000000000000000000008A /* SymptomsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SymptomsPickerView.swift"; sourceTree = "<group>"; };
+		E0000000000000000000008D /* AppConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppConfiguration.plist"; sourceTree = "<group>"; };
+		E000000000000000000000D1 /* PeriMeno.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = "PeriMeno.storekit"; sourceTree = "<group>"; };
+		E0000000000000000000008F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Localizable.xcstrings"; sourceTree = "<group>"; };
+		E00000000000000000000091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E00000000000000000000092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		E00000000000000000000095 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitManager.swift"; sourceTree = "<group>"; };
+		E00000000000000000000096 /* HealthPermissionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthPermissionState.swift"; sourceTree = "<group>"; };
+		E00000000000000000000098 /* CorrelationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CorrelationEngine.swift"; sourceTree = "<group>"; };
+		E00000000000000000000099 /* InsightEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightEngine.swift"; sourceTree = "<group>"; };
+		E0000000000000000000009A /* StageHintEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StageHintEngine.swift"; sourceTree = "<group>"; };
+		E0000000000000000000009C /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizationManager.swift"; sourceTree = "<group>"; };
+		E0000000000000000000009E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController.swift"; sourceTree = "<group>"; };
+		E0000000000000000000009F /* PreviewDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewDataFactory.swift"; sourceTree = "<group>"; };
+		E000000000000000000000A1 /* PremiumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PremiumManager.swift"; sourceTree = "<group>"; };
+		E000000000000000000000A2 /* PurchaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseState.swift"; sourceTree = "<group>"; };
+		E000000000000000000000A4 /* PDFReportBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFReportBuilder.swift"; sourceTree = "<group>"; };
+		E000000000000000000000A5 /* ReportTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportTemplates.swift"; sourceTree = "<group>"; };
+		E000000000000000000000A7 /* BiometricLockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BiometricLockManager.swift"; sourceTree = "<group>"; };
+		E000000000000000000000AA /* PMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMButton.swift"; sourceTree = "<group>"; };
+		E000000000000000000000AB /* PMCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMCard.swift"; sourceTree = "<group>"; };
+		E000000000000000000000AC /* PMEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMEmptyStateView.swift"; sourceTree = "<group>"; };
+		E000000000000000000000AD /* PMPremiumBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMPremiumBadge.swift"; sourceTree = "<group>"; };
+		E000000000000000000000AE /* PMSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMSectionHeader.swift"; sourceTree = "<group>"; };
+		E000000000000000000000AF /* PMStatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMStatCard.swift"; sourceTree = "<group>"; };
+		E000000000000000000000B0 /* PMSymptomChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMSymptomChip.swift"; sourceTree = "<group>"; };
+		E000000000000000000000B2 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleData.swift"; sourceTree = "<group>"; };
+		E000000000000000000000B4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme.swift"; sourceTree = "<group>"; };
+		E000000000000000000000B5 /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeColors.swift"; sourceTree = "<group>"; };
+		E000000000000000000000B6 /* ThemeSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeSpacing.swift"; sourceTree = "<group>"; };
+		E000000000000000000000B7 /* ThemeTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeTypography.swift"; sourceTree = "<group>"; };
+		E000000000000000000000B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		E000000000000000000000BA /* PeriMeno.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PeriMeno.entitlements"; sourceTree = "<group>"; };
+		E000000000000000000000BB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		E000000000000000000000BE /* PremiumProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PremiumProductsTests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000C1 /* CorrelationEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CorrelationEngineTests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000C2 /* InsightEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightEngineTests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000C4 /* SampleDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleDataTests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000C7 /* InsightsSmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightsSmokeUITests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000C9 /* LoggingSmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggingSmokeUITests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000CB /* OnboardingSmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingSmokeUITests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000CD /* PremiumSmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PremiumSmokeUITests.swift"; sourceTree = "<group>"; };
+		E000000000000000000000CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README.md"; sourceTree = "<group>"; };
+		E000000000000000000000CF /* master-spec.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "master-spec.md"; sourceTree = "<group>"; };
+		E000000000000000000000D0 /* master_spec.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "master_spec.md"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000008 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+		T10000000000000000000011 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+		T10000000000000000000012 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C00000000000000000000002 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000003,
+				E00000000000000000000004,
+				E00000000000000000000005,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000006 /* Engineering */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000007,
+				E00000000000000000000008,
+				E00000000000000000000009,
+				E0000000000000000000000A,
+				E0000000000000000000000B,
+			);
+			path = Engineering;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000000C /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000000D,
+				E0000000000000000000000E,
+				E0000000000000000000000F,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000010 /* QA */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000011,
+				E00000000000000000000012,
+			);
+			path = QA;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000001 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000002,
+				C00000000000000000000006,
+				C0000000000000000000000C,
+				C00000000000000000000010,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000014 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000015,
+				E00000000000000000000016,
+				E00000000000000000000017,
+				E00000000000000000000018,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000001A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000001B,
+				E0000000000000000000001C,
+				E0000000000000000000001D,
+				E0000000000000000000001E,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000001F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000020,
+				E00000000000000000000021,
+				E00000000000000000000022,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000023 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000024,
+				E00000000000000000000025,
+				E00000000000000000000026,
+				E00000000000000000000027,
+				E00000000000000000000028,
+				E00000000000000000000029,
+				E0000000000000000000002A,
+				E0000000000000000000002B,
+				E0000000000000000000002C,
+				E0000000000000000000002D,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000002E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000002F,
+				E00000000000000000000030,
+				E00000000000000000000031,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000019 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C0000000000000000000001A,
+				C0000000000000000000001F,
+				C00000000000000000000023,
+				C0000000000000000000002E,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000034 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000035,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000036 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000037,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000038 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000039,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000033 /* AppointmentBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000034,
+				C00000000000000000000036,
+				C00000000000000000000038,
+			);
+			path = AppointmentBuilder;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000003B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000003C,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000003D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000003E,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000003F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000040,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000003A /* BrainFogMode */ = {
+			isa = PBXGroup;
+			children = (
+				C0000000000000000000003B,
+				C0000000000000000000003D,
+				C0000000000000000000003F,
+			);
+			path = BrainFogMode;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000042 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000043,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000044 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000045,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000046 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000047,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000041 /* Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000042,
+				C00000000000000000000044,
+				C00000000000000000000046,
+			);
+			path = Cycle;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000049 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000004A,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000004B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000004C,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000004D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000004E,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000048 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000049,
+				C0000000000000000000004B,
+				C0000000000000000000004D,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000050 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000051,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000052 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000053,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000054 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000055,
+				E00000000000000000000056,
+				E00000000000000000000057,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000004F /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000050,
+				C00000000000000000000052,
+				C00000000000000000000054,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000059 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000005A,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000005B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000005C,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000005D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000005E,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000058 /* LogEntry */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000059,
+				C0000000000000000000005B,
+				C0000000000000000000005D,
+			);
+			path = LogEntry;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000060 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000061,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000062 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000063,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000064 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000065,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000005F /* Medications */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000060,
+				C00000000000000000000062,
+				C00000000000000000000064,
+			);
+			path = Medications;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000067 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000068,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000069 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000006A,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000006B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000006C,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000066 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000067,
+				C00000000000000000000069,
+				C0000000000000000000006B,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000006E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000006F,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000070 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000071,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000072 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000073,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000006D /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				C0000000000000000000006E,
+				C00000000000000000000070,
+				C00000000000000000000072,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000075 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000076,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000077 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000078,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000079 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000007A,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000074 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000075,
+				C00000000000000000000077,
+				C00000000000000000000079,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000007C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000007D,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000007E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000007F,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000080 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000081,
+				E00000000000000000000082,
+				E00000000000000000000083,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000007B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C0000000000000000000007C,
+				C0000000000000000000007E,
+				C00000000000000000000080,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000085 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000086,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000087 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000088,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000089 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000008A,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000084 /* Symptoms */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000085,
+				C00000000000000000000087,
+				C00000000000000000000089,
+			);
+			path = Symptoms;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000032 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000033,
+				C0000000000000000000003A,
+				C00000000000000000000041,
+				C00000000000000000000048,
+				C0000000000000000000004F,
+				C00000000000000000000058,
+				C0000000000000000000005F,
+				C00000000000000000000066,
+				C0000000000000000000006D,
+				C00000000000000000000074,
+				C0000000000000000000007B,
+				C00000000000000000000084,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000008C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000008D,
+				E000000000000000000000D1,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000008E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000008F,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000090 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000091,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C0000000000000000000008B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C0000000000000000000008C,
+				C0000000000000000000008E,
+				C00000000000000000000090,
+				E00000000000000000000092,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000094 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000095,
+				E00000000000000000000096,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000097 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				E00000000000000000000098,
+				E00000000000000000000099,
+				E0000000000000000000009A,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000009B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000009C,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000009D /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				E0000000000000000000009E,
+				E0000000000000000000009F,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000A0 /* Premium */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000A1,
+				E000000000000000000000A2,
+			);
+			path = Premium;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000A3 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000A4,
+				E000000000000000000000A5,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000A6 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000A7,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000093 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000094,
+				C00000000000000000000097,
+				C0000000000000000000009B,
+				C0000000000000000000009D,
+				C000000000000000000000A0,
+				C000000000000000000000A3,
+				C000000000000000000000A6,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000A9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000AA,
+				E000000000000000000000AB,
+				E000000000000000000000AC,
+				E000000000000000000000AD,
+				E000000000000000000000AE,
+				E000000000000000000000AF,
+				E000000000000000000000B0,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000B2,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000B3 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000B4,
+				E000000000000000000000B5,
+				E000000000000000000000B6,
+				E000000000000000000000B7,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000A8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C000000000000000000000A9,
+				C000000000000000000000B1,
+				C000000000000000000000B3,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000B8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000B9,
+				E000000000000000000000BA,
+				E000000000000000000000BB,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000013 /* PeriMenoApp */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000014,
+				C00000000000000000000019,
+				C00000000000000000000032,
+				C0000000000000000000008B,
+				C00000000000000000000093,
+				C000000000000000000000A8,
+				C000000000000000000000B8,
+			);
+			path = PeriMenoApp;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000BE,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000BF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000C1,
+				E000000000000000000000C2,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000C3 /* TestUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000C4,
+			);
+			path = TestUtilities;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000BC /* PeriMenoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C000000000000000000000BD,
+				C000000000000000000000BF,
+				C000000000000000000000C0,
+				C000000000000000000000C3,
+			);
+			path = PeriMenoTests;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000C6 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000C7,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000C8 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000C9,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000CA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000CB,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000CC /* Premium */ = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000CD,
+			);
+			path = Premium;
+			sourceTree = "<group>";
+		};
+		C000000000000000000000C5 /* PeriMenoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C000000000000000000000C6,
+				C000000000000000000000C8,
+				C000000000000000000000CA,
+				C000000000000000000000CC,
+			);
+			path = PeriMenoUITests;
+			sourceTree = "<group>";
+		};
+		CAAAAAAAAAAAAAAAAAAAAAAA = {
+			isa = PBXGroup;
+			children = (
+				E000000000000000000000CE,
+				E000000000000000000000CF,
+				E000000000000000000000D0,
+				C00000000000000000000001,
+				C00000000000000000000013,
+				C000000000000000000000BC,
+				C000000000000000000000C5,
+				CBBBBBBBBBBBBBBBBBBBBBB,
+			);
+			sourceTree = "<group>";
+		};
+		CBBBBBBBBBBBBBBBBBBBBBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000001 /* PeriMeno.app */,
+				F00000000000000000000002 /* PeriMenoTests.xctest */,
+				F00000000000000000000003 /* PeriMenoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000001 /* PeriMeno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000009 /* Build configuration list for PBXNativeTarget "PeriMeno" */;
+			buildPhases = (
+				A10000000000000000000006 /* Sources */,
+				A10000000000000000000008 /* Frameworks */,
+				A10000000000000000000007 /* Resources */,
+			);
+			buildRules = ( );
+			dependencies = ( );
+			name = PeriMeno;
+			productName = PeriMeno;
+			productReference = F00000000000000000000001 /* PeriMeno.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T10000000000000000000031 /* PeriMenoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = T10000000000000000000041 /* Build configuration list for PBXNativeTarget "PeriMenoTests" */;
+			buildPhases = (
+				T10000000000000000000013 /* Sources */,
+				T10000000000000000000011 /* Frameworks */,
+				T10000000000000000000015 /* Resources */,
+			);
+			buildRules = ( );
+			dependencies = (
+				T10000000000000000000022 /* PBXTargetDependency */,
+			);
+			name = PeriMenoTests;
+			productName = PeriMenoTests;
+			productReference = F00000000000000000000002 /* PeriMenoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		T10000000000000000000032 /* PeriMenoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = T10000000000000000000042 /* Build configuration list for PBXNativeTarget "PeriMenoUITests" */;
+			buildPhases = (
+				T10000000000000000000014 /* Sources */,
+				T10000000000000000000012 /* Frameworks */,
+				T10000000000000000000016 /* Resources */,
+			);
+			buildRules = ( );
+			dependencies = (
+				T10000000000000000000023 /* PBXTargetDependency */,
+			);
+			name = PeriMenoUITests;
+			productName = PeriMenoUITests;
+			productReference = F00000000000000000000003 /* PeriMenoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					A10000000000000000000001 = { CreatedOnToolsVersion = 26.5; };
+					T10000000000000000000031 = { CreatedOnToolsVersion = 26.5; TestTargetID = A10000000000000000000001; };
+					T10000000000000000000032 = { CreatedOnToolsVersion = 26.5; TestTargetID = A10000000000000000000001; };
+				};
+			};
+			buildConfigurationList = A1000000000000000000000A /* Build configuration list for PBXProject "PeriMeno" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = ( en, Base );
+			mainGroup = CAAAAAAAAAAAAAAAAAAAAAAA;
+			productRefGroup = CBBBBBBBBBBBBBBBBBBBBBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000001 /* PeriMeno */,
+				T10000000000000000000031 /* PeriMenoTests */,
+				T10000000000000000000032 /* PeriMenoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00000000000000000000111,
+				B0000000000000000000012F,
+				B00000000000000000000112,
+				B00000000000000000000114,
+				B0000000000000000000012E,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		T10000000000000000000015 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+		T10000000000000000000016 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B000000000000000000000D1,
+				B000000000000000000000D2,
+				B000000000000000000000D3,
+				B000000000000000000000D4,
+				B000000000000000000000D5,
+				B000000000000000000000D6,
+				B000000000000000000000D7,
+				B000000000000000000000D8,
+				B000000000000000000000D9,
+				B000000000000000000000DA,
+				B000000000000000000000DB,
+				B000000000000000000000DC,
+				B000000000000000000000DD,
+				B000000000000000000000DE,
+				B000000000000000000000DF,
+				B000000000000000000000E0,
+				B000000000000000000000E1,
+				B000000000000000000000E2,
+				B000000000000000000000E3,
+				B000000000000000000000E4,
+				B000000000000000000000E5,
+				B000000000000000000000E6,
+				B000000000000000000000E7,
+				B000000000000000000000E8,
+				B000000000000000000000E9,
+				B000000000000000000000EA,
+				B000000000000000000000EB,
+				B000000000000000000000EC,
+				B000000000000000000000ED,
+				B000000000000000000000EE,
+				B000000000000000000000EF,
+				B000000000000000000000F0,
+				B000000000000000000000F1,
+				B000000000000000000000F2,
+				B000000000000000000000F3,
+				B000000000000000000000F4,
+				B000000000000000000000F5,
+				B000000000000000000000F6,
+				B000000000000000000000F7,
+				B000000000000000000000F8,
+				B000000000000000000000F9,
+				B000000000000000000000FA,
+				B000000000000000000000FB,
+				B000000000000000000000FC,
+				B000000000000000000000FD,
+				B000000000000000000000FE,
+				B000000000000000000000FF,
+				B00000000000000000000100,
+				B00000000000000000000101,
+				B00000000000000000000102,
+				B00000000000000000000103,
+				B00000000000000000000104,
+				B00000000000000000000105,
+				B00000000000000000000106,
+				B00000000000000000000107,
+				B00000000000000000000108,
+				B00000000000000000000109,
+				B0000000000000000000010A,
+				B0000000000000000000010B,
+				B0000000000000000000010C,
+				B0000000000000000000010D,
+				B0000000000000000000010E,
+				B0000000000000000000010F,
+				B00000000000000000000110,
+				B00000000000000000000115,
+				B00000000000000000000116,
+				B00000000000000000000117,
+				B00000000000000000000118,
+				B00000000000000000000119,
+				B0000000000000000000011A,
+				B0000000000000000000011B,
+				B0000000000000000000011C,
+				B0000000000000000000011D,
+				B0000000000000000000011E,
+				B0000000000000000000011F,
+				B00000000000000000000120,
+				B00000000000000000000121,
+				B00000000000000000000122,
+				B00000000000000000000123,
+				B00000000000000000000124,
+				B00000000000000000000125,
+				B00000000000000000000126,
+				B00000000000000000000127,
+				B00000000000000000000128,
+				B00000000000000000000129,
+				B0000000000000000000012A,
+				B0000000000000000000012B,
+				B0000000000000000000012C,
+				B0000000000000000000012D,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		T10000000000000000000013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				T10000000000000000000001,
+				T10000000000000000000002,
+				T10000000000000000000003,
+				T10000000000000000000004,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		T10000000000000000000014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				T10000000000000000000005,
+				T10000000000000000000006,
+				T10000000000000000000007,
+				T10000000000000000000008,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		T10000000000000000000022 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A10000000000000000000001 /* PeriMeno */; targetProxy = T10000000000000000000020 /* PBXContainerItemProxy */; };
+		T10000000000000000000023 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A10000000000000000000001 /* PeriMeno */; targetProxy = T10000000000000000000021 /* PBXContainerItemProxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A1000000000000000000000B /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			}; name = Debug; };
+		A1000000000000000000000C /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			}; name = Release; };
+		A1000000000000000000000D /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PeriMenoApp/SupportingFiles/PeriMeno.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_ON_DEMAND_RESOURCES = NO;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PeriMenoApp/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perimeno.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			}; name = Debug; };
+		A1000000000000000000000E /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PeriMenoApp/SupportingFiles/PeriMeno.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_ON_DEMAND_RESOURCES = NO;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PeriMenoApp/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perimeno.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			}; name = Release; };
+		T10000000000000000000043 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perimeno.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeriMeno.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeriMeno";
+			}; name = Debug; };
+		T10000000000000000000044 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perimeno.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeriMeno.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeriMeno";
+			}; name = Release; };
+		T10000000000000000000045 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perimeno.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeriMeno;
+			}; name = Debug; };
+		T10000000000000000000046 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perimeno.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeriMeno;
+			}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000009 /* Build configuration list for PBXNativeTarget "PeriMeno" */ = {isa = XCConfigurationList; buildConfigurations = ( A1000000000000000000000D /* Debug */, A1000000000000000000000E /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A1000000000000000000000A /* Build configuration list for PBXProject "PeriMeno" */ = {isa = XCConfigurationList; buildConfigurations = ( A1000000000000000000000B /* Debug */, A1000000000000000000000C /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		T10000000000000000000041 /* Build configuration list for PBXNativeTarget "PeriMenoTests" */ = {isa = XCConfigurationList; buildConfigurations = ( T10000000000000000000043 /* Debug */, T10000000000000000000044 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		T10000000000000000000042 /* Build configuration list for PBXNativeTarget "PeriMenoUITests" */ = {isa = XCConfigurationList; buildConfigurations = ( T10000000000000000000045 /* Debug */, T10000000000000000000046 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000002 /* Project object */;
+}
