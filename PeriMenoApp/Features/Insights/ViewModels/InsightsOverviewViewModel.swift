@@ -19,7 +19,7 @@ final class InsightsOverviewViewModel: ObservableObject {
 
         let correlation = InsightCardModel(
             id: "correlation",
-            title: String(localized: "insights.correlation.title"),
+            title: String.pmLocalized( "insights.correlation.title"),
             body: correlationEngine.basicCorrelationSummary(entries: entries),
             systemImage: "point.3.connected.trianglepath.dotted",
             isPremium: true

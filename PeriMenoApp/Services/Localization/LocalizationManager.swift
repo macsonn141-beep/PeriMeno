@@ -32,3 +32,25 @@ final class LocalizationManager: ObservableObject {
         supportedLanguages.map(\.id)
     }
 }
+
+extension String {
+    static func pmLocalized(_ key: String, locale: Locale? = nil) -> String {
+        let activeLocale = locale ?? Locale(identifier: UserDefaults.standard.string(forKey: "settings.languageCode") ?? "en")
+        let languageCode = activeLocale.identifier
+        guard
+            let path = Bundle.main.path(forResource: languageCode, ofType: "lproj"),
+            let bundle = Bundle(path: path)
+        else {
+            return NSLocalizedString(key, comment: "")
+        }
+        return bundle.localizedString(forKey: key, value: nil, table: nil)
+    }
+
+    static func pmLocalized(_ resource: LocalizedStringResource) -> String {
+        String(localized: resource)
+    }
+
+    static func pmLocalizedKey(_ key: String) -> String {
+        pmLocalized(key)
+    }
+}

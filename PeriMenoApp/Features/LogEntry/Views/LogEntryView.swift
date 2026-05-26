@@ -245,14 +245,14 @@ private struct EntryHistoryRow: View {
     }
 
     private var scoreSummary: String {
-        String(localized: "entry.history.scores") + " \(entry.overallScore)/5"
+        String.pmLocalized( "entry.history.scores") + " \(entry.overallScore)/5"
     }
 
     private var symptomSummary: String {
         if let symptom = entry.symptoms.sorted(by: { $0.severity > $1.severity }).first {
-            return String(localized: "entry.history.topSymptom") + " \(EntryDisplay.name(for: symptom.symptomType))"
+            return String.pmLocalized( "entry.history.topSymptom") + " \(EntryDisplay.name(for: symptom.symptomType))"
         }
-        return String(localized: "entry.history.symptomCount") + " \(entry.symptoms.count)"
+        return String.pmLocalized( "entry.history.symptomCount") + " \(entry.symptoms.count)"
     }
 }
 
@@ -294,7 +294,7 @@ struct EntryDetailView: View {
             }
 
             Section("entry.detail.section.notes") {
-                Text(entry.notes.isEmpty ? String(localized: "entry.detail.none") : entry.notes)
+                Text(entry.notes.isEmpty ? String.pmLocalized( "entry.detail.none") : entry.notes)
                     .foregroundStyle(entry.notes.isEmpty ? .secondary : .primary)
             }
 
@@ -489,6 +489,14 @@ struct EditEntryView: View {
 
 private enum EntryDisplay {
     static func name(for id: String) -> String {
-        id.replacingOccurrences(of: "_", with: " ").capitalized
+        let symptom = String.pmLocalizedKey("symptom.\(id)")
+        if symptom != "symptom.\(id)" {
+            return symptom
+        }
+        let trigger = String.pmLocalizedKey("trigger.\(id)")
+        if trigger != "trigger.\(id)" {
+            return trigger
+        }
+        return id.replacingOccurrences(of: "_", with: " ").capitalized
     }
 }

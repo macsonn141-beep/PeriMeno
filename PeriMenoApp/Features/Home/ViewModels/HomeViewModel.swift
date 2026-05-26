@@ -12,37 +12,39 @@ final class HomeViewModel: ObservableObject {
 
     func recentSummary(entries: [DailyEntry]) -> String {
         guard let latest = entries.sorted(by: { $0.date > $1.date }).first else {
-            return String(localized: "home.summary.empty")
+            return String.pmLocalized( "home.summary.empty")
         }
-        return String(localized: "home.summary.latest") + " \(latest.symptoms.count)"
+        return String.pmLocalized( "home.summary.latest") + " \(latest.symptoms.count)"
     }
 
-    func latestEntryDetails(entries: [DailyEntry]) -> [String] {
+    func latestEntryDetails(entries: [DailyEntry], locale: Locale = .current) -> [String] {
         guard let latest = entries.sorted(by: { $0.date > $1.date }).first else {
             return []
         }
 
+        let mood = String.pmLocalized( "home.latest.mood", locale: locale)
+        let sleep = String.pmLocalized( "home.latest.sleep", locale: locale)
+        let energy = String.pmLocalized( "home.latest.energy", locale: locale)
+
         var details = [
-            String(localized: "home.latest.date") + " \(latest.date.pmShortDate)",
-            "Mood \(latest.moodScore)/5 · Sleep \(latest.sleepScore)/5 · Energy \(latest.energyScore)/5"
+            String.pmLocalized( "home.latest.date", locale: locale) + " \(latest.date.pmShortDate)",
+            "\(mood) \(latest.moodScore)/5 · \(sleep) \(latest.sleepScore)/5 · \(energy) \(latest.energyScore)/5"
         ]
 
         if let topSymptom = latest.symptoms.first {
-            details.append(String(localized: "home.latest.topSymptom") + " " + displayName(for: topSymptom.symptomType))
+            details.append(String.pmLocalized( "home.latest.topSymptom", locale: locale) + " " + displayName(for: topSymptom.symptomType))
         } else {
-            details.append(String(localized: "home.latest.noSymptoms"))
+            details.append(String.pmLocalized( "home.latest.noSymptoms", locale: locale))
         }
 
         if !latest.notes.isEmpty {
-            details.append(String(localized: "home.latest.note") + " \(latest.notes)")
+            details.append(String.pmLocalized( "home.latest.note", locale: locale) + " \(latest.notes)")
         }
 
         return details
     }
 
     private func displayName(for symptomType: String) -> String {
-        symptomType
-            .replacingOccurrences(of: "_", with: " ")
-            .capitalized
+        String.pmLocalizedKey("symptom.\(symptomType)")
     }
 }

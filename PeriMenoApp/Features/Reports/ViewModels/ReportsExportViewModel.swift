@@ -30,20 +30,20 @@ final class ReportsExportViewModel: ObservableObject {
 
         guard let kind = ReportKind(optionID: option.id) else {
             previewText = ""
-            pdfStatusText = String(localized: "reports.pdf.placeholderUnavailable")
+            pdfStatusText = String.pmLocalized( "reports.pdf.placeholderUnavailable")
             return
         }
 
         let filteredEntries = filtered(entries: entries)
         guard !filteredEntries.isEmpty else {
             previewText = ""
-            pdfStatusText = String(localized: "reports.pdf.empty")
+            pdfStatusText = String.pmLocalized( "reports.pdf.empty")
             return
         }
 
         let summary = ReportTemplates.makeSummary(entries: filteredEntries, range: selectedRange)
         previewText = ReportTemplates.previewText(kind: kind, summary: summary)
-        pdfStatusText = summary.hasLimitedData ? String(localized: "reports.pdf.lowData") : ""
+        pdfStatusText = summary.hasLimitedData ? String.pmLocalized( "reports.pdf.lowData") : ""
     }
 
     func buildPDFPreview(entries: [DailyEntry]) {
@@ -51,13 +51,13 @@ final class ReportsExportViewModel: ObservableObject {
         generatedReport = nil
 
         guard let selectedOption, let kind = ReportKind(optionID: selectedOption.id) else {
-            pdfStatusText = String(localized: "reports.pdf.chooseType")
+            pdfStatusText = String.pmLocalized( "reports.pdf.chooseType")
             return
         }
 
         let filteredEntries = filtered(entries: entries)
         guard !filteredEntries.isEmpty else {
-            pdfStatusText = String(localized: "reports.pdf.empty")
+            pdfStatusText = String.pmLocalized( "reports.pdf.empty")
             return
         }
 
@@ -66,9 +66,9 @@ final class ReportsExportViewModel: ObservableObject {
         do {
             let url = try writePDF(data: data, kind: kind, summary: summary)
             generatedReport = GeneratedReport(url: url, title: kind.title, byteCount: data.count)
-            pdfStatusText = String(localized: "reports.pdf.ready") + " \(data.count) " + String(localized: "reports.pdf.bytes")
+            pdfStatusText = String.pmLocalized( "reports.pdf.ready") + " \(data.count) " + String.pmLocalized( "reports.pdf.bytes")
         } catch {
-            pdfStatusText = String(localized: "reports.pdf.failed") + " \(error.localizedDescription)"
+            pdfStatusText = String.pmLocalized( "reports.pdf.failed") + " \(error.localizedDescription)"
         }
     }
 

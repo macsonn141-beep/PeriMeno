@@ -10,10 +10,10 @@ final class AppointmentBuilderViewModel: ObservableObject {
 
     func makePrep(entries: [DailyEntry]) -> AppointmentPrep {
         AppointmentPrep(
-            dateRange: String(localized: "appointment.range.placeholder"),
-            topSymptomsSummary: String(localized: "appointment.topSymptoms") + " \(entries.flatMap(\.symptoms).count)",
-            medicationSummary: String(localized: "appointment.medications.placeholder"),
-            suggestedQuestions: questions.map { String(localized: $0.localizationValue) }
+            dateRange: String.pmLocalized( "appointment.range.placeholder"),
+            topSymptomsSummary: String.pmLocalized( "appointment.topSymptoms") + " \(entries.flatMap(\.symptoms).count)",
+            medicationSummary: String.pmLocalized( "appointment.medications.placeholder"),
+            suggestedQuestions: questions.map { String.pmLocalized("appointment.question.\($0.id)") }
         )
     }
 }

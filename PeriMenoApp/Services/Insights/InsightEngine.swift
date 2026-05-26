@@ -6,8 +6,8 @@ struct InsightEngine {
             return [
                 InsightSnapshot(
                     summaryType: "empty",
-                    title: String(localized: "insights.empty.title"),
-                    body: String(localized: "insights.empty.message")
+                    title: String.pmLocalized( "insights.empty.title"),
+                    body: String.pmLocalized( "insights.empty.message")
                 )
             ]
         }
@@ -30,8 +30,8 @@ struct InsightEngine {
         var snapshots = [
             InsightSnapshot(
                 summaryType: "entries_last_7_days",
-                title: String(localized: "insights.entries7.title"),
-                body: String(localized: "insights.entries7.body") + " \(last7Days.count)",
+                title: String.pmLocalized( "insights.entries7.title"),
+                body: String.pmLocalized( "insights.entries7.body") + " \(last7Days.count)",
                 score: Double(last7Days.count)
             )
         ]
@@ -40,8 +40,8 @@ struct InsightEngine {
             snapshots.append(
                 InsightSnapshot(
                     summaryType: "top_symptom_30_days",
-                    title: String(localized: "insights.topSymptom.title"),
-                    body: String(localized: "insights.topSymptom.body") + " \(displayName(for: topSymptom.symptomType)) (\(topSymptom.count))",
+                    title: String.pmLocalized( "insights.topSymptom.title"),
+                    body: String.pmLocalized( "insights.topSymptom.body") + " \(displayName(for: topSymptom.symptomType)) (\(topSymptom.count))",
                     score: Double(topSymptom.count)
                 )
             )
@@ -49,8 +49,8 @@ struct InsightEngine {
             snapshots.append(
                 InsightSnapshot(
                     summaryType: "top_symptom_low_data",
-                    title: String(localized: "insights.lowData.title"),
-                    body: String(localized: "insights.lowData.symptoms")
+                    title: String.pmLocalized( "insights.lowData.title"),
+                    body: String.pmLocalized( "insights.lowData.symptoms")
                 )
             )
         }
@@ -59,7 +59,7 @@ struct InsightEngine {
             snapshots.append(
                 InsightSnapshot(
                     summaryType: "average_scores",
-                    title: String(localized: "insights.averages.title"),
+                    title: String.pmLocalized( "insights.averages.title"),
                     body: averageScoreSummary(entries: entries)
                 )
             )
@@ -67,8 +67,8 @@ struct InsightEngine {
             snapshots.append(
                 InsightSnapshot(
                     summaryType: "average_scores_low_data",
-                    title: String(localized: "insights.lowData.title"),
-                    body: String(localized: "insights.lowData.averages")
+                    title: String.pmLocalized( "insights.lowData.title"),
+                    body: String.pmLocalized( "insights.lowData.averages")
                 )
             )
         }
@@ -77,8 +77,8 @@ struct InsightEngine {
         snapshots.append(
             InsightSnapshot(
                 summaryType: "brain_fog_frequency",
-                title: String(localized: "insights.brainFog.title"),
-                body: String(localized: "insights.brainFog.body") + " \(brainFogEntries)",
+                title: String.pmLocalized( "insights.brainFog.title"),
+                body: String.pmLocalized( "insights.brainFog.body") + " \(brainFogEntries)",
                 score: Double(brainFogEntries)
             )
         )
@@ -86,8 +86,8 @@ struct InsightEngine {
         snapshots.append(
             InsightSnapshot(
                 summaryType: "cautious_language",
-                title: String(localized: "insights.caution.title"),
-                body: String(localized: "insights.caution.body")
+                title: String.pmLocalized( "insights.caution.title"),
+                body: String.pmLocalized( "insights.caution.body")
             )
         )
 
@@ -110,7 +110,10 @@ struct InsightEngine {
         let mood = average(entries.map(\.moodScore))
         let sleep = average(entries.map(\.sleepScore))
         let energy = average(entries.map(\.energyScore))
-        return String(localized: "insights.averages.body") + " mood \(mood), sleep \(sleep), energy \(energy)."
+        let moodLabel = String.pmLocalized("home.latest.mood").lowercased()
+        let sleepLabel = String.pmLocalized("home.latest.sleep").lowercased()
+        let energyLabel = String.pmLocalized("home.latest.energy").lowercased()
+        return String.pmLocalized("insights.averages.body") + " \(moodLabel) \(mood), \(sleepLabel) \(sleep), \(energyLabel) \(energy)."
     }
 
     private func average(_ values: [Int]) -> String {
@@ -120,8 +123,6 @@ struct InsightEngine {
     }
 
     private func displayName(for symptomType: String) -> String {
-        symptomType
-            .replacingOccurrences(of: "_", with: " ")
-            .capitalized
+        String.pmLocalizedKey("symptom.\(symptomType)")
     }
 }

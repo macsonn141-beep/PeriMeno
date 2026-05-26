@@ -42,9 +42,9 @@ struct PaywallView: View {
                                 appState.isPremiumUnlocked = premiumManager.purchaseState.isPremium
                                 paywallMessage = didUnlock
                                     ? successMessage(for: plan.id)
-                                    : String(localized: "paywall.productsUnavailable")
+                                    : String.pmLocalized( "paywall.productsUnavailable")
                                 #else
-                                paywallMessage = String(localized: "paywall.productsUnavailable")
+                                paywallMessage = String.pmLocalized( "paywall.productsUnavailable")
                                 #endif
                                 Logger.debug("StoreKit product metadata is not available yet.")
                             }
@@ -55,7 +55,7 @@ struct PaywallView: View {
                                 VStack(alignment: .leading) {
                                     Text(plan.title)
                                         .font(.headline)
-                                    Text(product?.displayPrice ?? String(localized: plan.price))
+                                    Text(product?.displayPrice ?? String.pmLocalized( plan.price))
                                         .foregroundStyle(.secondary)
                                     Text(kindText(for: plan.id))
                                         .font(.caption)
@@ -92,8 +92,8 @@ struct PaywallView: View {
                         let didRestore = await premiumManager.restorePurchases()
                         appState.isPremiumUnlocked = premiumManager.purchaseState.isPremium
                         paywallMessage = didRestore
-                            ? String(localized: "paywall.restore.premium")
-                            : String(localized: "paywall.restore.none")
+                            ? String.pmLocalized( "paywall.restore.premium")
+                            : String.pmLocalized( "paywall.restore.none")
                     }
                 }
                 .disabled(premiumManager.purchaseState == .loading)
@@ -143,9 +143,9 @@ struct PaywallView: View {
         guard let productID = premiumManager.purchaseState.productID else { return nil }
         switch PremiumProducts.kind(for: productID) {
         case .subscription:
-            return String(localized: "paywall.active.subscription")
+            return String.pmLocalized( "paywall.active.subscription")
         case .lifetime:
-            return String(localized: "paywall.active.lifetime")
+            return String.pmLocalized( "paywall.active.lifetime")
         case .unknown:
             return nil
         }
@@ -156,13 +156,13 @@ struct PaywallView: View {
         case .failed(let message):
             return message
         case .loading:
-            return String(localized: "paywall.purchase.pending")
+            return String.pmLocalized( "paywall.purchase.pending")
         case .free:
-            return String(localized: "paywall.purchase.cancelled")
+            return String.pmLocalized( "paywall.purchase.cancelled")
         case .premium(let productID):
             return successMessage(for: productID)
         case .unknown:
-            return String(localized: "paywall.status.failed")
+            return String.pmLocalized( "paywall.status.failed")
         }
     }
 
@@ -182,9 +182,9 @@ struct PaywallView: View {
     private func kindText(for productID: String) -> String {
         switch PremiumProducts.kind(for: productID) {
         case .subscription:
-            return String(localized: "paywall.kind.subscription")
+            return String.pmLocalized( "paywall.kind.subscription")
         case .lifetime:
-            return String(localized: "paywall.kind.lifetime")
+            return String.pmLocalized( "paywall.kind.lifetime")
         case .unknown:
             return ""
         }
@@ -193,11 +193,11 @@ struct PaywallView: View {
     private func successMessage(for productID: String) -> String {
         switch PremiumProducts.kind(for: productID) {
         case .subscription:
-            return String(localized: "paywall.purchase.subscriptionSuccess")
+            return String.pmLocalized( "paywall.purchase.subscriptionSuccess")
         case .lifetime:
-            return String(localized: "paywall.purchase.lifetimeSuccess")
+            return String.pmLocalized( "paywall.purchase.lifetimeSuccess")
         case .unknown:
-            return String(localized: "paywall.purchase.success")
+            return String.pmLocalized( "paywall.purchase.success")
         }
     }
 }

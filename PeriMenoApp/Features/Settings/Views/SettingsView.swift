@@ -6,8 +6,6 @@ struct SettingsView: View {
     @EnvironmentObject private var appState: AppState
     @Query(sort: \DailyEntry.date, order: .reverse) private var entries: [DailyEntry]
     @StateObject private var viewModel = SettingsViewModel()
-    @StateObject private var localizationManager = LocalizationManager()
-    @AppStorage("settings.languageCode") private var selectedLanguageCode = "en"
     @State private var placeholderMessage: String?
     @State private var debugMessage: String?
     @State private var shouldConfirmReset = false
@@ -15,12 +13,6 @@ struct SettingsView: View {
     var body: some View {
         List {
             Section("settings.section.preferences") {
-                Picker("settings.language", selection: $selectedLanguageCode) {
-                    ForEach(localizationManager.supportedLanguages) { language in
-                        Text(language.name).tag(language.id)
-                    }
-                }
-
                 Toggle("settings.notifications", isOn: $viewModel.notificationsEnabled)
                 Toggle("settings.faceID", isOn: $appState.faceIDEnabled)
             }
@@ -56,8 +48,8 @@ struct SettingsView: View {
                     } else {
                         Button {
                             placeholderMessage = String(
-                                format: String(localized: "settings.placeholder.messageFormat"),
-                                String(localized: row.title)
+                                format: String.pmLocalized( "settings.placeholder.messageFormat"),
+                                String.pmLocalized( row.title)
                             )
                             Logger.debug("Settings placeholder tapped: \(row.id)")
                         } label: {
@@ -116,12 +108,12 @@ struct SettingsView: View {
     private func seedSampleData() {
         SampleData.makeEntries().forEach { modelContext.insert($0) }
         try? modelContext.save()
-        debugMessage = String(localized: "settings.debug.seededMessage")
+        debugMessage = String.pmLocalized( "settings.debug.seededMessage")
     }
 
     private func resetLocalData() {
         entries.forEach { modelContext.delete($0) }
         try? modelContext.save()
-        debugMessage = String(localized: "settings.debug.resetMessage")
+        debugMessage = String.pmLocalized( "settings.debug.resetMessage")
     }
 }

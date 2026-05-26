@@ -11,37 +11,37 @@ struct PDFReportBuilder {
             writer.drawHeader(title: kind.title, subtitle: "PeriMeno")
 
             writer.drawSection(
-                title: String(localized: "reports.pdf.section.summary"),
+                title: String.pmLocalized( "reports.pdf.section.summary"),
                 body: ReportTemplates.baseSummaryLines(summary: summary).joined(separator: "\n")
             )
 
             writer.drawSection(
-                title: String(localized: "reports.pdf.section.symptoms"),
+                title: String.pmLocalized( "reports.pdf.section.symptoms"),
                 body: ReportTemplates.symptomFrequencyText(summary: summary)
             )
 
             writer.drawSection(
-                title: String(localized: "reports.pdf.section.ratings"),
+                title: String.pmLocalized( "reports.pdf.section.ratings"),
                 body: ReportTemplates.ratingsSummaryText(summary: summary)
             )
 
             if kind == .doctor {
                 writer.drawSection(
-                    title: String(localized: "reports.pdf.section.brainFog"),
+                    title: String.pmLocalized( "reports.pdf.section.brainFog"),
                     body: ReportTemplates.brainFogSummaryText(summary: summary)
                 )
                 writer.drawSection(
-                    title: String(localized: "reports.pdf.section.cycle"),
+                    title: String.pmLocalized( "reports.pdf.section.cycle"),
                     body: ReportTemplates.cycleSummaryText(summary: summary)
                 )
                 writer.drawSection(
-                    title: String(localized: "reports.pdf.section.medications"),
+                    title: String.pmLocalized( "reports.pdf.section.medications"),
                     body: ReportTemplates.medicationSummaryText(summary: summary)
                 )
             }
 
             writer.drawSection(
-                title: String(localized: "reports.pdf.section.notes"),
+                title: String.pmLocalized( "reports.pdf.section.notes"),
                 body: ReportTemplates.notesSummaryText(summary: summary)
             )
 
@@ -159,8 +159,8 @@ private final class PDFTextWriter {
     }
 
     private func drawFooter() {
-        let disclaimer = String(localized: "report.disclaimer")
-        let footer = "\(disclaimer)\n" + String(localized: "reports.pdf.page") + " \(pageNumber)"
+        let disclaimer = String.pmLocalized( "report.disclaimer")
+        let footer = "\(disclaimer)\n" + String.pmLocalized( "reports.pdf.page") + " \(pageNumber)"
         let rect = CGRect(
             x: PDFLayout.margin,
             y: PDFLayout.pageBounds.height - PDFLayout.footerHeight + 8,

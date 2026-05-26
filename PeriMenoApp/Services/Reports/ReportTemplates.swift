@@ -20,7 +20,7 @@ struct ReportSummary {
 
     var dateRangeText: String {
         guard let first = entries.last, let last = entries.first else {
-            return String(localized: "reports.summary.dateRange.empty")
+            return String.pmLocalized( "reports.summary.dateRange.empty")
         }
         return "\(first.date.pmShortDate) - \(last.date.pmShortDate)"
     }
@@ -60,7 +60,7 @@ enum ReportTemplates {
         let medicationEvents = sortedEntries.flatMap(\.medicationsTaken)
         let medicationSummary = medicationEvents.isEmpty
             ? nil
-            : String(localized: "reports.summary.medications") + " \(medicationEvents.count)"
+            : String.pmLocalized( "reports.summary.medications") + " \(medicationEvents.count)"
 
         let userNotes = sortedEntries
             .compactMap { entry -> String? in
@@ -106,7 +106,7 @@ enum ReportTemplates {
         sections.append(cycleSummaryText(summary: summary))
         sections.append(medicationSummaryText(summary: summary, appointmentPrep: appointmentPrep))
         sections.append(notesSummaryText(summary: summary))
-        sections.append(String(localized: "report.disclaimer"))
+        sections.append(String.pmLocalized( "report.disclaimer"))
         return sections.joined(separator: "\n\n")
     }
 
@@ -121,14 +121,14 @@ enum ReportTemplates {
 
     static func baseSummaryLines(summary: ReportSummary) -> [String] {
         var lines = [
-            String(localized: "reports.summary.generated") + " \(summary.generatedAt.pmReportDate)",
-            String(localized: "reports.summary.selectedRange") + " \(summary.rangeLabel)",
-            String(localized: "reports.summary.dateRange") + " \(summary.dateRangeText)",
-            String(localized: "reports.summary.entries") + " \(summary.entryCount)"
+            String.pmLocalized( "reports.summary.generated") + " \(summary.generatedAt.pmReportDate)",
+            String.pmLocalized( "reports.summary.selectedRange") + " \(summary.rangeLabel)",
+            String.pmLocalized( "reports.summary.dateRange") + " \(summary.dateRangeText)",
+            String.pmLocalized( "reports.summary.entries") + " \(summary.entryCount)"
         ]
 
         if summary.hasLimitedData {
-            lines.append(String(localized: "reports.summary.lowData"))
+            lines.append(String.pmLocalized( "reports.summary.lowData"))
         }
 
         return lines
@@ -140,14 +140,14 @@ enum ReportTemplates {
         }
 
         guard !summary.topSymptoms.isEmpty else {
-            return String(localized: "reports.summary.topSymptoms.placeholder")
+            return String.pmLocalized( "reports.summary.topSymptoms.placeholder")
         }
 
         let rows = summary.topSymptoms.map {
-            "- \($0.name): \($0.count) " + String(localized: "reports.summary.times") + ", " + String(localized: "reports.summary.averageSeverity") + " \(formatScore($0.averageSeverity))"
+            "- \($0.name): \($0.count) " + String.pmLocalized( "reports.summary.times") + ", " + String.pmLocalized( "reports.summary.averageSeverity") + " \(formatScore($0.averageSeverity))"
         }
 
-        return String(localized: "reports.summary.topSymptoms") + "\n" + rows.joined(separator: "\n")
+        return String.pmLocalized( "reports.summary.topSymptoms") + "\n" + rows.joined(separator: "\n")
     }
 
     static func ratingsSummaryText(summary: ReportSummary) -> String {
@@ -156,38 +156,38 @@ enum ReportTemplates {
         let energy = formatOptionalScore(summary.averageEnergy)
         let brainFog = formatOptionalScore(summary.averageBrainFog)
         return [
-            String(localized: "reports.summary.ratings"),
-            "- " + String(localized: "reports.summary.mood") + " \(mood)",
-            "- " + String(localized: "reports.summary.sleep") + " \(sleep)",
-            "- " + String(localized: "reports.summary.energy") + " \(energy)",
-            "- " + String(localized: "reports.summary.brainFog") + " \(brainFog)"
+            String.pmLocalized( "reports.summary.ratings"),
+            "- " + String.pmLocalized( "reports.summary.mood") + " \(mood)",
+            "- " + String.pmLocalized( "reports.summary.sleep") + " \(sleep)",
+            "- " + String.pmLocalized( "reports.summary.energy") + " \(energy)",
+            "- " + String.pmLocalized( "reports.summary.brainFog") + " \(brainFog)"
         ].joined(separator: "\n")
     }
 
     static func brainFogSummaryText(summary: ReportSummary) -> String {
         let percent = summary.entryCount == 0 ? 0 : Int((Double(summary.brainFogEntryCount) / Double(summary.entryCount) * 100).rounded())
-        return String(localized: "reports.summary.brainFogMode") + " \(summary.brainFogEntryCount)/\(summary.entryCount) (\(percent)%)"
+        return String.pmLocalized( "reports.summary.brainFogMode") + " \(summary.brainFogEntryCount)/\(summary.entryCount) (\(percent)%)"
     }
 
     static func cycleSummaryText(summary: ReportSummary) -> String {
         guard !summary.cycleNotes.isEmpty else {
-            return String(localized: "reports.summary.cycle.placeholder")
+            return String.pmLocalized( "reports.summary.cycle.placeholder")
         }
-        return String(localized: "reports.summary.cycle") + "\n- " + summary.cycleNotes.joined(separator: "\n- ")
+        return String.pmLocalized( "reports.summary.cycle") + "\n- " + summary.cycleNotes.joined(separator: "\n- ")
     }
 
     static func medicationSummaryText(summary: ReportSummary, appointmentPrep: AppointmentPrep? = nil) -> String {
         if let appointmentMedication = appointmentPrep?.medicationSummary.nonEmpty {
             return appointmentMedication
         }
-        return summary.medicationSummary ?? String(localized: "reports.summary.medications.placeholder")
+        return summary.medicationSummary ?? String.pmLocalized( "reports.summary.medications.placeholder")
     }
 
     static func notesSummaryText(summary: ReportSummary) -> String {
         guard !summary.userNotes.isEmpty else {
-            return String(localized: "reports.summary.notes.placeholder")
+            return String.pmLocalized( "reports.summary.notes.placeholder")
         }
-        return String(localized: "reports.summary.notes") + "\n- " + summary.userNotes.joined(separator: "\n- ")
+        return String.pmLocalized( "reports.summary.notes") + "\n- " + summary.userNotes.joined(separator: "\n- ")
     }
 
     private static func average(_ values: [Int]) -> Double? {
@@ -197,7 +197,7 @@ enum ReportTemplates {
 
     private static func formatOptionalScore(_ value: Double?) -> String {
         guard let value else {
-            return String(localized: "reports.summary.notEnoughData")
+            return String.pmLocalized( "reports.summary.notEnoughData")
         }
         return formatScore(value) + "/5"
     }

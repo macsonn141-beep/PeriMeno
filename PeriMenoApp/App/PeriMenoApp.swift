@@ -17,6 +17,7 @@ struct PeriMenoApp: App {
                 .environmentObject(appState)
                 .environment(\.locale, Locale(identifier: selectedLanguageCode))
                 .environment(\.layoutDirection, selectedLanguageCode == "ar" ? .rightToLeft : .leftToRight)
+                .id(selectedLanguageCode)
         }
         .modelContainer(modelContainer)
     }

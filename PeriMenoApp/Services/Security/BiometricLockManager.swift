@@ -16,7 +16,7 @@ final class BiometricLockManager: ObservableObject {
         do {
             let success = try await context.evaluatePolicy(
                 .deviceOwnerAuthenticationWithBiometrics,
-                localizedReason: String(localized: "security.faceID.reason")
+                localizedReason: String.pmLocalized( "security.faceID.reason")
             )
             isUnlocked = success
             return success

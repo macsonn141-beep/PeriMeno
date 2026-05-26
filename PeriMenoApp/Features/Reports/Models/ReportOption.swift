@@ -25,9 +25,9 @@ enum ReportKind: String {
     var title: String {
         switch self {
         case .doctor:
-            return String(localized: "reports.pdf.title.doctor")
+            return String.pmLocalized( "reports.pdf.title.doctor")
         case .selfSummary:
-            return String(localized: "reports.pdf.title.self")
+            return String.pmLocalized( "reports.pdf.title.self")
         }
     }
 
@@ -73,11 +73,11 @@ enum ReportRange: String, CaseIterable, Identifiable {
     var exportLabel: String {
         switch self {
         case .last7:
-            return String(localized: "reports.range.last7")
+            return String.pmLocalized( "reports.range.last7")
         case .last30:
-            return String(localized: "reports.range.last30")
+            return String.pmLocalized( "reports.range.last30")
         case .last90:
-            return String(localized: "reports.range.last90")
+            return String.pmLocalized( "reports.range.last90")
         }
     }
 

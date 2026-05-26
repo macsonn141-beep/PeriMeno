@@ -74,14 +74,14 @@ final class PremiumManager: ObservableObject {
                     await transaction.finish()
                     return true
                 case .unverified:
-                    purchaseState = .failed(message: String(localized: "premium.purchase.unverified"))
+                    purchaseState = .failed(message: String.pmLocalized( "premium.purchase.unverified"))
                 }
             case .userCancelled:
                 restorePersistedStateOrFree()
             case .pending:
                 purchaseState = .loading
             @unknown default:
-                purchaseState = .failed(message: String(localized: "premium.purchase.unknown"))
+                purchaseState = .failed(message: String.pmLocalized( "premium.purchase.unknown"))
             }
         } catch {
             purchaseState = .failed(message: error.localizedDescription)
@@ -198,25 +198,25 @@ enum PremiumProductLoadDiagnostic: Equatable {
     var message: String {
         switch self {
         case .notRequested:
-            return String(localized: "paywall.diagnostic.notRequested")
+            return String.pmLocalized( "paywall.diagnostic.notRequested")
         case .loading(let requestedIDs):
             return String(
-                format: String(localized: "paywall.diagnostic.loading"),
+                format: String.pmLocalized( "paywall.diagnostic.loading"),
                 requestedIDs.joined(separator: ", ")
             )
         case .loaded(let returnedIDs):
             return String(
-                format: String(localized: "paywall.diagnostic.loaded"),
+                format: String.pmLocalized( "paywall.diagnostic.loaded"),
                 returnedIDs.joined(separator: ", ")
             )
         case .emptyResponse(let requestedIDs):
             return String(
-                format: String(localized: "paywall.diagnostic.empty"),
+                format: String.pmLocalized( "paywall.diagnostic.empty"),
                 requestedIDs.joined(separator: ", ")
             )
         case .failed(let message):
             return String(
-                format: String(localized: "paywall.diagnostic.failed"),
+                format: String.pmLocalized( "paywall.diagnostic.failed"),
                 message
             )
         }
